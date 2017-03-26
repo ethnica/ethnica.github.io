@@ -1,4 +1,4 @@
-﻿var AccessoriesController = angular.module("Ethnica")
+var AccessoriesController = angular.module("Ethnica")
 .controller("AccessoriesController", function ($scope, $rootScope) {
 
     $scope.MagicSpinLoader = true;
@@ -82,7 +82,14 @@
 { "ID": 46, "Product": "Bangel", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "bangel.png" },
 { "ID": 47, "Product": "Bangel", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "bangel.png" },
 { "ID": 48, "Product": "Bangel", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "bangel.png" },
-{ "ID": 49, "Product": "Bangel", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "bangel.png" }]
+{ "ID": 49, "Product": "Bangel", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "Necklace.png" },
+{ "ID": 50, "Product": "Necklace", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "Necklace.png" },
+{ "ID": 51, "Product": "Necklace", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "Necklace.png" },
+{ "ID": 52, "Product": "Necklace", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "Necklace.png" },
+{ "ID": 53, "Product": "Necklace", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "Necklace.png" },
+{ "ID": 54, "Product": "Necklace", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "Necklace.png" },
+{ "ID": 55, "Product": "Necklace", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "Necklace.png" },
+{ "ID": 56, "Product": "Necklace", "Category": "Bridal", "Price": 500, "NewPrice": 500, "OldPrice": 600, "Description": "Crystal Chocker", "Discount": "20", "Url": "Necklace.png" }]
 
     //Initializing the data
     $scope.EthnicaProducts = $scope.MainEthnicaProducts
