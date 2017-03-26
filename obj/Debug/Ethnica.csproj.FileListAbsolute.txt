@@ -1,0 +1,6 @@
+E:\Ethnica\Ethnica\Ethnica\bin\Ethnica.dll.config
+E:\Ethnica\Ethnica\Ethnica\bin\Ethnica.dll
+E:\Ethnica\Ethnica\Ethnica\bin\Ethnica.pdb
+E:\Ethnica\Ethnica\Ethnica\obj\Debug\Ethnica.dll
+E:\Ethnica\Ethnica\Ethnica\obj\Debug\Ethnica.pdb
+E:\Ethnica\Ethnica\Ethnica\obj\Debug\Ethnica.csprojResolveAssemblyReference.cache

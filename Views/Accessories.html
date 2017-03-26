@@ -1,0 +1,135 @@
+﻿
+    <div class="divBlackBar">
+        <span id="filterBar" ng-click="showOrHideFilter()"><i class="fa fa-sliders"></i> Show Filter</span>
+        </div>
+    <div class="divFilterBar" ng-show="showFilter">
+        <div class="cd-filter-block">
+            <h4>Search</h4>
+
+            <div class="cd-filter-content">
+                <form ng-submit="searchUsers()"><input id="searchInput" type="search" placeholder="Search your product.."></form>
+                
+            </div> <!-- cd-filter-content -->
+        </div> <!-- cd-filter-block -->
+        <div class="cd-filter-block">
+            <h4>Discounts</h4>
+            <ul class="cd-filter-content cd-filters list">
+                <li>
+                    <input class="filter" value="10-20" data-filter=".discountradio1" type="radio" name="discountRadio" id="discountradio1" >
+                    <label class="radio-label" for="discountradio1">10%-20%</label>
+                </li>
+                <li>
+                    <input class="filter" value="20-30" data-filter=".discountradio2" type="radio" name="discountRadio" id="discountradio2">
+                    <label class="radio-label" for="discountradio2">20%-30%</label>
+                </li>
+                <li>
+                    <input class="filter" value="30-40" data-filter=".discountradio3" type="radio" name="discountRadio" id="discountradio3">
+                    <label class="radio-label" for="discountradio3">30%-40%</label>
+                </li>
+            </ul> <!-- cd-filter-content -->
+        </div> <!-- cd-filter-block -->
+        <div class="cd-filter-block">
+            <h4>Select</h4>
+
+            <div class="cd-filter-content">
+                <div class="cd-select cd-filters">
+                    <select id="productFilter" class="filter" name="selectThis" id="selectThis">
+                        <option value="">Choose a product</option>
+                        <option value="Ring">Rings</option>
+                        <option value="Necklace">Necklace</option>
+                        <option value="Bangel">Bangels</option>
+                        <option value="Stud">Studs</option>
+                    </select>
+                </div> <!-- cd-select -->
+            </div> <!-- cd-filter-content -->
+        </div> <!-- cd-filter-block -->
+        <div class="cd-filter-block">
+            <h4>Category</h4>
+            <ul class="cd-filter-content cd-filters list">
+                <li>
+                    <input class="filter" value="All" data-filter="" type="radio" name="categoryRadio" id="radio1" checked="">
+                    <label class="radio-label" for="radio1">All</label>
+                </li>
+                <li>
+                    <input class="filter" value="Bridal" data-filter=".radio2" type="radio" name="categoryRadio" id="radio2">
+                    <label class="radio-label" for="radio2">Bridal</label>
+                </li>
+                <li>
+                    <input class="filter" value="Classical" data-filter=".radio3" type="radio" name="categoryRadio" id="radio3">
+                    <label class="radio-label" for="radio3">Classical</label>
+                </li>
+            </ul> <!-- cd-filter-content -->
+        </div>
+        <div class="cd-filter-block">
+            <h4>Price Range</h4>
+            <br/>
+            <input id="filterPrice" type="hidden" class="range-slider" value="1000" />
+            <br/>
+            <a id="priceFilterButton" class="price-filter" title="filter">Filter</a>
+        </div>
+    </div>
+    <ul class="surveys grid">
+        <li class="survey-item" ng-repeat="product in EthnicaProducts| pagination: curPage * pageSize | limitTo: pageSize">
+            <figure class="snip0060 black">
+                <img ng-src="../Images/Products/{{product.Url}}" />
+                <figcaption>
+                    <div><i class="fa fa-search-plus"></i></div>
+                    <div>
+                        <p>{{product.Description}}<br />&#8377;{{product.NewPrice}}<span style="text-decoration:line-through"> &#8377;{{product.OldPrice}}</span><br>Discount {{product.Discount}}%</p>
+                    </div>
+                    <a></a>
+                </figcaption>
+            </figure>
+        </li>
+     
+    </ul>  
+    <div class="pagination pagination-centered" >
+        <ul class="pagination-controle pagination">
+            <li>
+                <button id="PageButton" type="button" class="btn btn-primary" ng-disabled="curPage == 0"
+                        ng-click="curPage=curPage-1">
+                    &lt; PREV
+                </button>
+            </li>
+            <li>
+                <span>Page {{curPage + 1}} of {{ numberOfPages() }}</span>
+            </li>
+            <li>
+                <button id="PageButton" type="button" class="btn btn-primary"
+                        ng-disabled="curPage >= EthnicaProducts.length/pageSize - 1"
+                        ng-click="curPage = curPage+1">
+                    NEXT &gt;
+                </button>
+            </li>
+        </ul>
+    </div>
+<div id="openModal" class="modalDialog" ng-show="MagicSpinLoader==true">
+    <div class="csscssload-load-frame">
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+    </div>
+    </div>
+

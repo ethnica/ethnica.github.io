@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html class="ng-scope" ng-app="Ethnica">
+<head>
+    <title>Ethnica</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="/Images/MainLogo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/jquery-ui.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Angular-Route.js"></script>
+    <script src="CSS/bootstrap/js/bootstrap.m.js"></script>
+    <script src="CSS/materialize/js/materialize.min.js"></script>
+    <script src="Scripts/jquery.range-min.js"></script>
+    <script src="Controllers/App.js"></script>
+    <script src="Controllers/NavigationController.js"></script>
+    <script src="Controllers/HomeController.js"></script>
+    <script src="Controllers/AccessoriesController.js"></script>
+    <script src="Scripts/NavbarUI.js"></script>
+    <link href="CSS/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="CSS/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="CSS/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="CSS/jquery.range.css" rel="stylesheet" />
+    <link href="CSS/Main.css" rel="stylesheet" />
+    <link href="CSS/MagicSquareLoader.css" rel="stylesheet" />
+    <script>
+        //Code for handelling cursor movement
+        $(document).ready(function () {
+            var movementStrength = 25;
+            var height = movementStrength / $(window).height();
+            var width = movementStrength / $(window).width();
+            $("#bgCover").mousemove(function (e) {
+                var pageX = e.pageX - ($(window).width() / 2);
+                var pageY = e.pageY - ($(window).height() / 2);
+                var newvalueX = width * pageX * -1 - 25;
+                var newvalueY = height * pageY * -1 - 50;
+                $('#bgCover').css("background-position", newvalueX + "px     " + newvalueY + "px");
+            });
+            $("#MainFrame").mousemove(function (e) {
+                var pageX = e.pageX - ($(window).width() / 2);
+                var pageY = e.pageY - ($(window).height() / 2);
+                var newvalueX = width * pageX * -1 - 25;
+                var newvalueY = height * pageY * -1 - 50;
+                $('#bgCover').css("background-position", newvalueX + "px     " + newvalueY + "px");
+            });
+        });
+    </script>
+</head>
+<body>
+   <div id="bgCover"></div>
+    <header id="headerMain" class="main-header">
+        <div class="header-wrapper" ng-controller="NavigationController">
+            <div class="main-logo">
+                <img src="Images/Logo.png" />Ethnica
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><div class="fa fa-star-half-o" style="font-size: larger" aria-hidden="true"></div><a href="#Home" data-target="#Home" ng-click="navigateTo('Home')">Home</a></li>
+                    <li><div class="fa fa-star-half-o" style="font-size: larger" aria-hidden="true"></div><a data-target="#Accessories" href="#Accessories" ng-click="navigateTo('Accessories')">Accessories</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="section-1">
+        <div class="content-slider">
+            <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+            <input type="radio" id="banner2" class="sec-1-input" name="banner">
+            <input type="radio" id="banner3" class="sec-1-input" name="banner">
+            <input type="radio" id="banner4" class="sec-1-input" name="banner">
+            <div class="slider">
+                <div id="top-banner-1" class="banner">
+                    <div class="banner-inner-wrapper">
+                       
+                    </div>
+                </div>
+                <div id="top-banner-2" class="banner">
+                    <div class="banner-inner-wrapper">
+                      
+                    </div>
+                </div>
+                <div id="top-banner-3" class="banner">
+                    <div class="banner-inner-wrapper">
+                       
+                    </div>
+                </div>
+
+                <div id="top-banner-4" class="banner">
+                    <div class="banner-inner-wrapper">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="MainFrame">
+        
+            <div ng-view=""></div>
+        </div>
+    <footer class="footerMain" id="footerArea">
+        <p>©Ethnica 2017</p>
+        <p>Learn more <a data-target="#About" href="#About" ng-click="navigateTo('About')">about us</a></p>
+        <div id="social" ><i class="fa fa-facebook"></i></div>
+        <div id="social" ><i class="fa fa-twitter"></i></div>
+        <div id="social" ><i class="fa fa-google-plus"></i></div>
+        <div id="social" ><i class="fa fa-instagram"></i></div>
+    </footer>
+</body>
+</html>
